@@ -24,4 +24,8 @@ class WorkshopParticipant extends Model
     public function workshop(): BelongsTo {
         return $this->belongsTo(BookingTransaction::class, 'booking_transaction_id');
     }
+
+    public function bookingTransaction(): BelongsTo {
+        return $this->belongsTo(BookingTransaction::class, 'booking_transaction_id');
+    }
 }

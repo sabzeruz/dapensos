@@ -48,6 +48,58 @@ class WorkshopResource extends Resource
                     Forms\Components\FileUpload::make('bg_map')
                     ->image()
                     ->required(),
+                    
+                    //added 'about'
+                    Forms\Components\TextInput::make('about')
+                    ->label('Tentang Workshop')
+                    ->required()
+                    ->maxLength(255),
+
+                    //added 'price'
+                    Forms\Components\TextInput::make('price')
+                    ->label('Harga')
+                    ->required()
+                    ->prefix('Rp' )
+                    ->maxLength(255),
+
+                      //added 'is_open' if want to open workshop or no
+                      Forms\Components\Select::make('is_open')
+                      ->label('Status')
+                      ->options([
+                          1 => 'Open',   // 1 berarti terbuka
+                          0 => 'Closed', // 0 berarti tertutup
+                      ])
+                      ->default(1) // Set default ke 'Open'
+                      ->required(),
+                      
+                      Forms\Components\Select::make('has_started')
+                      ->label('Sudah Dimulai')
+                      ->options([
+                          1 => 'Yes',    // 1 berarti sudah dimulai
+                          0 => 'No',     // 0 berarti belum dimulai
+                      ])
+                      ->default(0) // Set default ke 'No'
+                      ->required(),
+      
+                      Forms\Components\DateTimePicker::make('started_at')
+                      ->label('Waktu Mulai')
+                      ->required(),
+      
+                      Forms\Components\DateTimePicker::make('time_at')
+                      ->label('Waktu Tambahan')
+                      ->required(),
+
+                       // added 'instructor'
+                       Forms\Components\Select::make('workshop_instructor_id') 
+                       ->relationship('Instructor', 'name')
+                       ->required()
+                       ->label('Workshop Instructor'),
+
+                      // added 'Category'
+                      Forms\Components\Select::make('category_id') 
+                      ->relationship('category', 'name')
+                      ->required()
+                      ->label('Category'),
                  
                     Forms\Components\Repeater::make('benefits')
                     ->relationship('benefits')
