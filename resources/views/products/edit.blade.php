@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Edit Products - SantriKoding.com</title>
-    <script src="https://cdn.ckeditor.com/4.25.0-lts/standard/ckeditor.js"></script>
+    <title>Edit Products</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body style="background: lightgray">
@@ -60,8 +59,11 @@ Judul Product">
                     </div>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-md btn-primary me3">UPDATE</button>
-                <button type="reset" class="btn btn-md btn-warning">RESET</button>
+                <br>
+                <div class="form-group float-end">
+                  <button type="reset" class="btn btn-md btn-warning">RESET</button>
+                  <button type="submit" class="btn btn-md btn-primary me3">UPDATE</button>
+                </div>
               </form>
             </div>
           </div>
