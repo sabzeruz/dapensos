@@ -21,11 +21,16 @@ class WorkshopParticipant extends Model
         'booking_transaction_id',
     ];
 
-    public function workshop(): BelongsTo {
+    public function workshop(): BelongsTo
+    {
+        return $this->belongsTo(Workshop::class, 'workshop_id');
+    }
+
+
+    public function bookingTransaction(): BelongsTo
+    {
         return $this->belongsTo(BookingTransaction::class, 'booking_transaction_id');
     }
 
-    public function bookingTransaction(): BelongsTo {
-        return $this->belongsTo(BookingTransaction::class, 'booking_transaction_id');
-    }
+
 }

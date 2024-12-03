@@ -27,19 +27,24 @@ class BookingTransaction extends Model
         'workshop_id',
     ];
 
-    public static function generateUniqueTrxId() {
-        $prefix = 'AKT';
+    public static function generateUniqueTrxId()
+    {
+        $prefix = 'tra';
         do {
             $randomString = $prefix . mt_rand(1000, 9999);
         } while (self::where('booking_trx_id', $randomString)->exists());
+
         return $randomString;
     }
 
-    public function participants(): HasMany {
+    public function participants(): HasMany
+    {
         return $this->hasMany(WorkshopParticipant::class);
     }
 
-    public function workshop(): BelongsTo {
-        return $this->belongsTo(Workshop::class);
+    public function workshop(): BelongsTo
+    {
+        return $this->belongsTo(Workshop::class, 'workshop_id');
     }
+
 }

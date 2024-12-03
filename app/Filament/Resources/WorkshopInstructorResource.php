@@ -26,11 +26,11 @@ class WorkshopInstructorResource extends Resource
                 Forms\Components\TextInput::make('name')
                 ->required()
                 ->maxLength(255),
-                
-                Forms\Components\TextInput::make('occupation')
+
+                Forms\Components\TextInput::make('occupation' )
                 ->required()
                 ->maxLength(255),
-                
+
                 Forms\Components\FileUpload::make('avatar')
                 ->image()
                 ->required(),
@@ -41,12 +41,12 @@ class WorkshopInstructorResource extends Resource
     {
         return $table
             ->columns([
-               Tables\Columns\TextColumn :: make ('name')
-               ->searchable(),
+                Tables\Columns\TextColumn :: make('name')
+                ->searchable(),
 
-               Tables\Columns\TextColumn :: make('occupation'),
+                Tables\Columns\TextColumn :: make('occupation'),
 
-               Tables\Columns\ImageColumn :: make('avatar'),
+                Tables\Columns\ImageColumn :: make('avatar'),
             ])
             ->filters([
                 //

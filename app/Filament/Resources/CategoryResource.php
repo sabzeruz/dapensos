@@ -30,14 +30,11 @@ class CategoryResource extends Resource
                 Forms\Components\TextInput::make('tagline')
                 ->required()
                 ->maxLength(255),
-                
+
                 Forms\Components\FileUpload::make('icon')
                 ->image()
                 ->required(),
             ]);
-        
-
-
     }
 
     public static function table(Table $table): Table

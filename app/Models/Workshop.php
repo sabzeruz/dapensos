@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
 
 class Workshop extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, softDeletes;
 
     protected $fillable = [
         'name',
@@ -31,28 +31,34 @@ class Workshop extends Model
     ];
 
     protected $casts = [
-        'started_at' => 'date',
-        'time_at' => 'datetime:H:i',
+    'started_at' => 'date',
+    'time_at' => 'datetime:H:i',
     ];
 
-    public function setNameAttribute($value) {
-        $this->attributes ['name'] = $value;
-        $this->attributes ['slug'] = Str::slug($value);
+    public function setNameAttribute($value)
+    {
+        $this->attributes ['name'] = $value; // pembukaan kursus bahasa jepang
+        $this->attributes ['slug'] = Str::slug($value); https://training.poliban.ac.id/pembukaan-kursus-bahasa-jepang
     }
 
-    public function benefits(): HasMany {
+    public function benefits(): HasMany
+    {
         return $this->hasMany(WorkshopBenefit::class);
     }
 
-    public function participants(): HasMany {
+    public function participants(): HasMany
+    {
         return $this->hasMany(WorkshopParticipant::class);
     }
 
-
-    public function category(): BelongsTo {
+    public function category(): BelongsTo
+    {
         return $this->belongsTo(Category::class, 'category_id');
     }
-    public function instructor(): BelongsTo {
+
+    public function instructor(): BelongsTo
+    {
         return $this->belongsTo(WorkshopInstructor::class, 'workshop_instructor_id');
     }
+
 }

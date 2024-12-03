@@ -19,13 +19,16 @@ class Category extends Model
         'tagline',
     ];
 
-    public function setNameAttribute($value)     {
+    public function setNameAttribute($value)
+    {
         $this->attributes['name'] = $value;
         $this->attributes['slug'] = Str::slug($value);
     }
 
 
-    public function workshops(): HasMany {
+    public function workshops(): HasMany
+    {
         return $this->hasMany(Workshop::class);
     }
+    
 }
