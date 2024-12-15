@@ -1566,7 +1566,7 @@ video {
 body{
   font-family: "Poppins";
   color: #09093C;
-  background-color: #F5F6FB;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

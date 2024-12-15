@@ -1,29 +1,35 @@
 @extends('layouts.app')
-@section('title','Training Center Poliban')
+@section('title','DAPENSOS - Data Penerima Bantuan Sosial')
 @section('content')
 <div class="h-[112px]">
     <x-nav/>
  </div>
-<header class="flex flex-col w-full max-h-[1210px] bg-[linear-gradient(0deg,_#5B8CE9_0%,_#4EB6F5_100%)] -mb-[128px]">
-    <div class="flex flex-col items-center gap-6 mt-20">
+ 
+ <header class="flex flex-col w-full max-h-[600px] bg-black">
+    <div class="flex flex-col items-start gap-12 mt-20" style="margin-left: 6rem;">
         <div class="flex items-center w-fit rounded-full p-1 pr-4 gap-[10px] bg-[#DFEFFF]">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center shrink-0 bg-aktiv-blue overflow-hidden">
-                <img src="{{asset('assets/images/icons/medal-star.svg')}}" class="w-6 h-6" alt="icon">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center shrink-0 bg-[#DFEFFF] overflow-hidden">
+                <img src="{{asset('assets/images/logos/Logo.svg')}}" class="w-6 h-6" alt="icon">
             </div>
-            <p class="font-semibold text-lg leading-[27px] text-aktiv-blue">#1 Best Workshop in Indonesia</p>
+            <p class="font-semibold text-lg leading-[27px]">Kementerian Sosial Republik Indonesia</p>
         </div>
-        <h1 class="w-[800px] text-center text-[42px] leading-[58.8px] text-white font-['Neue_Plak_bold'] capitalize">Revitalize your daily routine with<br> powerful productivity 💪</h1>
-        <div class="flex w-fit rounded-full p-4 bg-[#FFFFFF17]">
+        <h1 class="w-[800px] text-left text-[42px] leading-[58.8px] text-white font-['Neue_Plak_bold'] capitalize">
+           Bersama<br> Membangun Negeri
+        </h1>
+        <!-- <div class="flex w-fit rounded-full p-4 bg-[#FFFFFF17]">
             <a href="#" class="flex items-center rounded-full px-9 h-[56px] gap-[10px] bg-aktiv-orange">
                 <span class="font-semibold text-white">Get Started ></span>
             </a>
-        </div>
+        </div> -->
     </div>
-    <div class="flex w-full overflow-hidden">
-        <img src="{{asset('assets/images/backgrounds/wadedan_A_cheerful_workshop_scene_showing_a_man_presenting_his__f 1.png')}}" class="w-full h-full object-cover object-top" alt="">
-    </div>
+    <!-- <div class="flex w-auto overflow-hidden justify-center">
+        <img src="{{asset('assets/images/backgrounds/wadedan_A_cheerful_workshop_scene_showing_a_man_presenting_his__f 1.png')}}" 
+             class="max-w-[90%] max-h-[600px] object-contain rounded-lg" alt="Workshop Background">
+    </div> -->
 </header>
-<section id="Goals" class="w-full max-w-[1280px] mx-auto px-[52px] z-10">
+
+
+<!-- <section id="Goals" class="w-full max-w-[1280px] mx-auto px-[52px] z-10">
     <div class="bg-[linear-gradient(0deg,rgba(230,231,235,0)_0%,#E6E7EB_100%)] rounded-3xl p-[1px]">
         <div class="grid grid-cols-4 items-center gap-6 rounded-3xl p-[32px_52px] bg-white">
             <div class="flex flex-col gap-3">
@@ -47,11 +53,11 @@
             </div>
         </div>
     </div>
-</section>
-<section id="Categories" class="w-full max-w-[1280px] mx-auto px-[52px] mt-[100px]">
+</section> -->
+<section id="Categories" class="w-full max-w-[1280px] mx-auto px-[52px] mt-[100px]" style="margin-left: 3rem;">
     <div class="flex flex-col gap-8">
         <div class="flex items-center justify-between">
-            <h2 class="font-Neue-Plak-bold text-[32px] leading-[44.54px] capitalize">We have several 🌟 <br> workshop categories</h2>
+            <h2 class="font-Neue-Plak-bold text-[32px] text-white leading-[44.54px] capitalize">We have several 🌟 <br> workshop categories</h2>
             <a href="#" class="flex items-center rounded-full py-4 px-6 h-[56px] gap-3 bg-aktiv-orange">
                 <span class="font-semibold text-white">See All</span>
                 <span class="w-6 h-6 rounded-full bg-white text-center align-middle text-aktiv-orange font-bold">></span>
@@ -78,10 +84,10 @@
         </div>
     </div>
 </section>
-<section id="Trending" class="w-full max-w-[1280px] mx-auto px-[52px] mt-[100px]">
+<section id="Trending" class="w-full max-w-[1280px]  px-[52px] mt-[100px]"  style="margin-left: 3rem;">
     <div class="flex flex-col gap-8">
         <div class="flex items-center justify-between">
-            <h2 class="font-Neue-Plak-bold text-[32px] leading-[44.54px] capitalize">Highly sought-after 🔥<br>workshops are trending </h2>
+            <h2 class="font-Neue-Plak-bold text-[32px] text-white leading-[44.54px] capitalize">Highly sought-after 🔥<br>workshops are trending </h2>
             <a href="#" class="flex items-center rounded-full py-4 px-6 h-[56px] gap-3 bg-aktiv-orange">
                 <span class="font-semibold text-white">See All</span>
                 <span class="w-6 h-6 rounded-full bg-white text-center align-middle text-aktiv-orange font-bold">></span>
@@ -168,7 +174,7 @@
     </div>
 </section>
 
-<div class="w-full py-[52px] bg-white mt-[100px]">
+<!-- <div class="w-full py-[52px] bg-white mt-[100px]">
     <section id="Testimony">
         <div class="flex flex-col gap-8">
             <div class="flex w-full max-w-[1280px] mx-auto items-center justify-between px-[52px]">
@@ -297,8 +303,8 @@
             </a>
         </div>
     </section>
-</div>
-<div id="Join-Now" class="relative w-full overflow-hidden">
+</div> -->
+<!-- <div id="Join-Now" class="relative w-full overflow-hidden">
     <img src="{{asset('assets/images/backgrounds/lines.svg')}}" class="w-full h-full object-cover absolute" alt="backgrounds">
     <div class="relative flex items-center w-full max-w-[1176px] mx-auto my-[52px] h-[464px] rounded-2xl bg-[linear-gradient(280.42deg,#5B8CE9_-42.59%,#4EB6F5_50.66%,#5B8CE9_143.91%)] overflow-hidden z-10">
         <div class="flex flex-col justify-center p-[90px] pr-[60px] gap-8">
@@ -312,7 +318,7 @@
             <img src="{{asset('assets/images/photos/join-now.png')}}" class="w-full h-full object-contain" alt="photo">
         </div>
     </div>
-</div>
+</div> -->
 
 
 <x-footer />
