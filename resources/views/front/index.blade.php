@@ -63,7 +63,7 @@
                 <span class="w-6 h-6 rounded-full bg-white text-center align-middle text-aktiv-orange font-bold">></span>
             </a>
         </div>
-        <div class="grid grid-cols-4 gap-6">
+        <!-- <div class="grid grid-cols-4 gap-6">
             @forelse ($categories as $itemCategory)
             <a href="{{route('front.category', $itemCategory->slug)}}" class="card">
                 <div class="flex items-center h-full rounded-3xl p-5 pr-1 gap-3 bg-white">
@@ -81,7 +81,7 @@
             @empty
             <p>belum ada data kategori</p>
             @endforelse
-        </div>
+        </div> -->
     </div>
 </section>
 <section id="Trending" class="w-full max-w-[1280px]  px-[52px] mt-[100px]"  style="margin-left: 3rem;">
@@ -94,7 +94,7 @@
             </a>
         </div>
 
-        <div class="grid grid-cols-3 gap-6">
+        <!-- <div class="grid grid-cols-3 gap-6">
             @forelse ($newWorkshops as $itemNewWorkshop)
             <a href="{{route('front.details', $itemNewWorkshop->slug)}}" class="card">
                 <div class="flex flex-col h-full justify-between rounded-3xl p-6 gap-9 bg-white">
@@ -170,7 +170,7 @@
             @empty
             <p>belum ada data workshop terbaru</p>
             @endforelse
-        </div>
+        </div> -->
     </div>
 </section>
 
